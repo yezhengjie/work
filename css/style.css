@@ -1,0 +1,342 @@
+/* --------------------基础样式---------------------*/
+h2{
+  text-align: center;
+  color: #272727;
+
+}
+h3 {
+  font-size: 24px; 
+  font-weight: normal; 
+  margin: 10px 0 0; 
+  text-transform: uppercase;
+}
+p {font-size: 14px; 
+  font-weight: 300; 
+  line-height: 22px; 
+  padding: 0 30px; 
+  margin-bottom: 10px;
+}
+
+.animated {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+/*---------------------导航线样式-------------------*/
+.nav>span {
+  display:block;
+  width:100%;
+  height:2px;
+  background:#f60;
+  position:absolute;
+  bottom:0;
+}
+/*---------------------副导航样式-----------------------*/
+ul.nav-tabs{
+    width: 140px;
+    margin-top: 40px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.87);
+
+}
+ul.nav-tabs li{
+    margin: 0;
+    border-top: 1px solid #ddd;
+}
+ul.nav-tabs li:first-child{
+    border-top: none;
+}
+ul.nav-tabs li a{
+  color: #000;
+    margin: 0;
+    padding: 8px 16px;
+    border-radius: 0;
+}
+ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+    color: #fff;
+    background: #0088cc;
+    border: 1px solid #0088cc;
+}
+ul.nav-tabs li:first-child a{
+    border-radius: 4px 4px 0 0;
+}
+ul.nav-tabs li:last-child a{
+    border-radius: 0 0 4px 4px;
+}
+ul.nav-tabs.affix{
+    top: 70px; /* 距离头部固定距离 */
+}
+
+
+/*-----------------------模块一：国内游---------------------------*/
+.sec1{
+
+
+	display: block;
+	height: 250px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+
+/* ------------------------模块二：出境游-------------------------- */
+
+.text-desc{
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+  background:  rgba(0,0,0,0.05); 
+  height: 100%; 
+  opacity: 0; 
+  width: 100%; 
+  padding: 20px;
+}
+.port{
+  float: left; 
+  width: 100%; 
+  position: relative; 
+  overflow: hidden; 
+  text-align: center; 
+  border: 4px solid rgba(255, 255, 255, 0.9); 
+  overflow: hidden;
+}
+/*文字*/
+.port.text-desc{
+  opacity: 0; 
+  transition: 0.5s; 
+  color: #000;
+}
+/*-------------第一个---------*/
+.port.effect-1 img{
+  transition: 0.5s; 
+  position: relative; 
+  width: 100%; 
+  left: 0;
+}
+.port.effect-1:hover img{
+  left: 50%; 
+  /*图片从中间开始显示*/
+}
+.port.effect-1 .text-desc{
+  transform: perspective(600px) rotateY(90deg); 
+  transform-origin: left center 0; 
+  width: 50%; 
+  position: absolute; 
+  left: 0; 
+  top: 0;  
+  padding: 18px 10px;
+}
+.port.effect-1:hover .text-desc{
+  opacity: 1; 
+  transform: perspective(600px) rotateY(0deg); 
+  z-index: 99;
+}
+/*------------第二个-------------*/
+.port.effect-2 img{
+  transition: 0.5s;
+   position: relative; 
+   width: 100%; 
+   top: 0;
+ }
+.port.effect-2:hover img{
+  top: 50%;
+}
+.port.effect-2 .text-desc{
+  transform: perspective(600px) rotateX(90deg); 
+  transform-origin: top center 0; 
+  width: 100%; 
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+  height: 50%; 
+  padding: 5px 10px;
+}
+.port.effect-2:hover .text-desc{
+  opacity: 1; 
+  transform: perspective(600px) rotateX(0deg); 
+  z-index: 99;
+}
+/*-----------------第三个---------------*/
+.port.effect-3 img{
+  transition: 0.5s; 
+  position: relative; 
+  width: 100%; 
+  right: 0;
+}
+.port.effect-3:hover img{
+  right: 50%;
+}
+.port.effect-3 .text-desc{
+  transform: perspective(600px) rotateY(-90deg); 
+  transform-origin: right center 0; 
+  width: 50%; 
+  position: absolute; 
+  left: auto;
+  right: 0; 
+  top: 0;  
+  padding: 18px 10px;
+ }
+.port.effect-3:hover .text-desc{
+  opacity: 1; 
+  transform: perspective(600px) rotateY(0deg); 
+  z-index: 99;
+}
+
+/*------------------------------模块三：定制游---------------------------------*/
+.sec3{
+	width: 100%;
+	display: block;
+	height: 550px;
+}
+.myform{
+	width: 400px;
+	margin: 50px 30px;
+	/*display: none;*/
+	background: rgba(0,0,0,0.5);
+	padding: 30px 30px 30px 30px;
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #fff;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+.btn{
+	background:#f60;
+	margin-top:20px; 
+	color:#fff;
+}
+ .btn:hover{
+	background:#fff;
+	margin-top:20px; 
+	border: 2px solid #f60;
+	color:#f60;
+}
+
+.sec3-font{
+	color: #fff;
+	margin-top: 60px;
+}
+
+
+/*---------------------模块四：高端跟团----------------------------------------*/
+/*----------基本布局---------*/
+.single-member{
+  width: 236px; 
+  float: left; 
+  font-family: sans-sarif; 
+  margin: 30px 2.5%; 
+  background-color: #fff; 
+  text-align: center; 
+  position: relative;
+}
+.member-image img{
+  max-width: 100%; 
+  vertical-align: middle;
+}
+
+.fb-touch{
+  background-position: 0 0;
+}
+.tweet-touch{
+  background-position: -35px 0;
+}
+.linkedin-touch{
+  background-position: -71px 0;
+}
+.icon-colored .fb-touch{
+  background-position: 0 -27px;
+}
+.icon-colored .tweet-touch{
+  background-position: -35px -27px;
+}
+.icon-colored .linkedin-touch{
+  background-position: -71px -27px;
+}
+/*----------特效--------*/
+.sec4{
+  max-height: 312px; 
+  min-height: 312px; 
+  overflow: hidden;
+}
+.sec4t h3{
+  padding-top: 7px; 
+  line-height: 30px;
+}
+.sec4 .member-image{
+  border-bottom: 5px solid #e5642b; 
+  transition: 0.4s; 
+  height: 212px; 
+  width: 100%; 
+  display: inline-block; 
+  float: none; 
+  vertical-align: middle;
+}
+.sec4 .member-info{
+  transition: 0.4s;
+}
+.sec4 .member-image img{
+  width: 100%; 
+  vertical-align: bottom;
+}
+.sec4 .social-touch{
+  background-color: #e5642b; 
+  float: left; 
+  left: 0; 
+  bottom: 0; 
+  overflow: hidden; 
+  padding: 5px 0; 
+  width: 100%; 
+  transition: 0.4s;
+}
+.sec4:hover .member-image{
+  border-bottom: 0; 
+  border-radius: 0 0 50px 50px; 
+  height: 81px; 
+  display: inline-block; 
+  overflow: hidden; 
+  width: 109px; 
+  transition: 0.4s;
+}
+/*--------------------------模块五：旅游攻略-----------------------------*/
+.media-object{
+  width: 140px;
+}
+
+
+/*-------------------------尾部-------------------------*/
+.footer{
+	margin-top: 100px;
+	background: #272727;
+	text-align:center;
+	color: #ccc;
+}
+.footer img{
+	width: 80px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.brand{
+	text-align:center;
+	display: block;
+	margin-top: 20px;
+	color: #ccc;
+
+}
+.brand a{
+	color: #ccc;
+}
+.brand img{
+	width: 40px;
+}
+.footer ul{
+	align:center;
+}
+.footer ul li{
+	float: left;
+	display:inline;
+	margin-top: 10px;
+	margin-left: 10px;
+	}
